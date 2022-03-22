@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+    <meta charset="UTF-16">
+    <title>Javascript Algorithms</title>
+    <link rel ="stylesheet" href="Web_Css.css">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;500&family=Roboto+Mono:ital,wght@0,300;0,400;0,500;1,200&display=swap" rel="stylesheet">
+    <script src="js_scripts/ceasars_cipher.js"></script>
+    <script src="js_scripts/palindrome_checker.js"></script>
+    <script src="js_scripts/roman_numeral_converter.js"></script>
+    <script src="js_scripts/number-validator.js"></script>
+    <script src="js_scripts/cash_register.js"></script>
+    <script src="js_scripts/side-nav-bar.js"></script>
+    <script src="js_scripts/fib_sum.js"></script>
+    <script src="js_scripts/sum_primes.js"></script>
+    <script src="js_scripts/lcm.js"></script>
+    <script src="https://kit.fontawesome.com/22f8f99d61.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id = "nav-bar" class = "nav-bar-u">
+        <a href="#c-c-sec">1</a>
+        <a href="#p-c-sec">2</a>
+        <a href="#r-n-c-sec">3</a>
+        <a href="#t-n-v-sec">4</a>
+        <a href="#c-r-sec">5</a>
+        <a href="#f-sec">6</a>
+        <a href="#p-sec">7</a>
+        <a href="#l-sec">8</a>
+    </div>
+    <a href="#title-div">
+        <div id= "top-link" class = "top-link-u"><i class="fas fa-angle-double-up"></i></div>
+    </a>
+    <div id = "title-div">
+        <span id = "title-header">
+            <span>{</span>
+            <span>Javascript Algorithms</span>
+            <span>}</span>
+        </span>
+        <span id = "button-container">
+            <a href ="#c-c-sec">Caesars cipher</a>
+            <a href ="#p-c-sec">Palindrome checker</a>
+            <a href ="#r-n-c-sec">Roman numeral converter</a>
+            <a href ="#t-n-v-sec">US Number validator</a>
+            <a href ="#c-r-sec">Cash Register</a>
+            <a href="#f-sec">Odd Fibonacci Numbers</a>
+            <a href="#p-sec">Sum All Primes</a>
+            <a href="#l-sec">Lowest Common Multiple</a>
+        </span>
+    </div>
+    <div class = "section-div" id ="c-c-sec">
+        <div>
+            <h3>Caesars cipher:</h3>
+            <div>In cryptography, a Caesar cipher, 
+                also known as <b>Caesar's cipher</b>, the <b>shift cipher</b>, 
+                <b>Caesar's code</b> or <b>Caesar shift</b>, is one of the simplest
+                 and most widely known encryption techniques.
+                  It is a type of substitution cipher in which each letter
+                   in the plaintext is replaced by a letter some fixed number of 
+                   positions down the alphabet. For example, with a left shift of 3, D 
+                   would be replaced by A, E would become B, and so on. The method is 
+                   named after Julius Caesar, who used it in his private correspondence.
+            </div>
+            <div>
+                Encode your text below with a ROT13 cipher, where the values of the letters are shifted by 13 places. Thus A ↔ N, B ↔ O and so on.
+            </div>
+            <div>
+                <form class="grid-layout">
+                    <div class ="input-card">
+                        <div>
+                            <textarea name="encode-text" id="c-c-encode"></textarea>
+                            <button type="button" onclick="rot13('encode')" class="input-button">Encode</button>
+                        </div>
+                    </div>
+                    <div class = "input-card">
+                        <div>
+                            <textarea name="decode-text" id="c-c-decode"></textarea>
+                            <button type="button" onclick="rot13('decode')" class="input-button">Decode</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        
+        </div>
+    </div>
+    <div class ="section-div" id ="p-c-sec">
+        <div>
+            <h3>Palindrome Checker:</h3>
+            <div>
+                A palindrome is a word, number, phrase, 
+                or other sequence of characters which reads 
+                the same backward as forward, such as madam or racecar. 
+                There are also numeric palindromes, including date/time stamps using 
+                short digits 11/11/11 11:11 and long digits 02/02/2020. Sentence-length 
+                palindromes ignore capitalization, punctuation, and word boundaries.
+            </div>
+            <div>
+                The word palindrome was introduced by Henry Peacham in 1638.[1] 
+                It is derived from the Greek roots πάλιν 'again' and δρóμος 'way, 
+                direction'; a different word is used in Greek, καρκινικός 'carcinic' 
+                (lit. crab-like) to refer to letter-by-letter reversible writing.
+            </div>
+            <div>
+                Enter some text below to check if its a palindrome
+            </div>
+            <div id="palindrome-container">
+                <div class ="input-card">
+                    <div>
+                        <textarea name="palidrome-text" id="p-checker"></textarea>
+                        <button type="button" onclick="palindrome()" class="input-button">Check</button>
+                        <div id="fail-or-pass" class ="valid-box"></div>
+                    </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <div class ="section-div" id ="r-n-c-sec">
+        <div>
+            <h3>Roman numeral converter:</h3>
+            <div>
+                Roman numerals are a numeral system that originated in ancient 
+                Rome and remained the usual way of writing numbers throughout 
+                Europe well into the Late Middle Ages. Numbers in this system are 
+                represented by combinations of letters from the Latin alphabet. 
+                Modern style uses seven symbols, each with a fixed integer value:
+            </div>
+            <div>
+                The use of Roman numerals continued long after the decline of the Roman 
+                Empire. From the 14th century on, Roman numerals began to be replaced by 
+                Arabic numerals; however, this process was gradual, and the use of Roman 
+                numerals persists in some applications to this day.
+            </div>
+            <div>
+                Convert a positive integer number to a roman numeral
+            </div>
+            <div class=center>
+            <div class="number-algo-container">
+                <input type="number" id="r-checker" class="n-box">
+                <button type="button" onclick="convertToRoman()" class="input-button">Convert</button>
+                <div id="r-output" class ="n-box"></div>
+            </div>
+            </div>
+        </div>
+    </div>
+    <div class="section-div" id ="t-n-v-sec">
+        <div>
+            <h3>US telephone number validator:</h3>
+            <div>
+                The following algorithm validates a phone number to make sure if followes one of these patters:
+                <div id="pattern-block">
+                555-555-5555<br>
+                (555)555-5555<br>
+                (555) 555-5555<br>
+                (555)-555-5555<br>
+                555 555 5555<br>
+                5555555555<br>
+                1 555 555 5555<br>
+                </div>
+                The number must be 10 number long(without country code), it may have spaces or hyphens between the number groups, the area code may be in brackets.
+                If a country code is inculed it must be a one and seperated from the area code by either backets or a space.
+            </div>
+            <div class="center">
+                <div class="number-algo-container">
+                    <input type="text" id="number-checker" class="n-box">
+                    <button type="button" onclick="telephoneCheck()" class="input-button">Check</button>
+                    <div id = "number-valid" class = "valid-box"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="section-div" id ="c-r-sec">
+        <div>
+            <h3>Virtual cash register:</h3>
+            <div>
+                The terminal below allows you to charge a virtual cash register
+                with a positive integer multiple of the specified coin or bill. It will inform you of the
+                total amount of the specified bill in the register and also of the
+                total amount of all the cash in the register regardless of bill or coin type.
+            </div>
+            <div>
+                When a transaction is made with the payment terminal, information regrading what change
+                the customer should receive will be displayed, the change will be selected from the largest
+                bills available in the register eg: if the Product price is 60$ and the Bill Received one hundred dollar bill then the change will be two twenty dollar bills.
+            </div>
+            <div>
+                The cash register status will be INVALID INPUT if the charge is invalid, OPEN if the transaction is made successfully or the
+                register has been charged with new funds, CLOSED if the transaction is made but the change given is equal to the remaining funds in the register
+                and INSUFFICIENT_FUNDS if the register cannot provide the change necessary
+            </div>
+            <div class ="cr-box">
+                <div class="cr-row">
+                    <div class="bill-container">
+                        <div class="n-box" id ="penny-ammount">0</div>
+                        <input type="number" id="penny" class="n-box">
+                        <button type="button" onclick="chargeObj('penny','add','cashRegisterObj')" class="input-button">+</button>
+                        <button type="button" onclick="chargeObj('penny','subtract','cashRegisterObj')" class="input-button">-</button>
+                        <div class ="n-box">Penny</div>
+                    </div>
+                    <div class="bill-container">
+                        <div class="n-box" id ="nickel-ammount">0</div>
+                        <input type="number" id="nickel" class="n-box">
+                        <button type="button" onclick="chargeObj('nickel','add','cashRegisterObj')" class="input-button">+</button>
+                        <button type="button" onclick="chargeObj('nickel','subtract','cashRegisterObj')" class="input-button">-</button>
+                        <div class ="n-box">Nickel</div>
+                    </div>
+                </div>
+                <div class="cr-row">
+                    <div class="bill-container">
+                        <div class="n-box" id ="dime-ammount">0</div>
+                        <input type="number" id="dime" class="n-box">
+                        <button type="button" onclick="chargeObj('dime','add','cashRegisterObj')" class="input-button">+</button>
+                        <button type="button" onclick="chargeObj('dime','subtract','cashRegisterObj')" class="input-button">-</button>
+                        <div class ="n-box">Dime</div>
+                    </div>
+                    <div class="bill-container">
+                        <div class="n-box" id ="quater-ammount">0</div>
+                        <input type="number" id="quater" class="n-box">
+                        <button type="button" onclick="chargeObj('quater','add','cashRegisterObj')" class="input-button">+</button>
+                        <button type="button" onclick="chargeObj('quater','subtract','cashRegisterObj')" class="input-button">-</button>
+                        <div class ="n-box">Quater</div>
+                    </div>
+                </div>
+                <div class="cr-row">
+                    <div class="bill-container">
+                        <div class="n-box" id ="one-ammount">0</div>
+                        <input type="number" id="one" class="n-box">
+                        <button type="button" onclick="chargeObj('one','add','cashRegisterObj')" class="input-button">+</button>
+                        <button type="button" onclick="chargeObj('one','subtract','cashRegisterObj')" class="input-button">-</button>
+                        <div class ="n-box">One</div>
+                    </div>
+                    <div class="bill-container">
+                        <div class="n-box" id ="five-ammount">0</div>
+                        <input type="number" id="five" class="n-box">
+                        <button type="button" onclick="chargeObj('five','add','cashRegisterObj')" class="input-button">+</button>
+                        <button type="button" onclick="chargeObj('five','subtract','cashRegisterObj')" class="input-button">-</button>
+                        <div class ="n-box">Five</div>
+                    </div>
+                </div>
+                <div class="cr-row">
+                    <div class="bill-container">
+                        <div class="n-box" id ="ten-ammount">0</div>
+                        <input type="number" id="ten" class="n-box">
+                        <button type="button" onclick="chargeObj('ten','add','cashRegisterObj')" class="input-button">+</button>
+                        <button type="button" onclick="chargeObj('ten','subtract','cashRegisterObj')" class="input-button">-</button>
+                        <div class ="n-box">Ten</div>
+                    </div>
+                    <div class="bill-container">
+                        <div class="n-box" id ="twenty-ammount">0</div>
+                        <input type="number" id="twenty" class="n-box">
+                        <button type="button" onclick="chargeObj('twenty','add','cashRegisterObj')" class="input-button">+</button>
+                        <button type="button" onclick="chargeObj('twenty','subtract','cashRegisterObj')" class="input-button">-</button>
+                        <div class ="n-box">Twenty</div>
+                    </div>
+                </div>
+                <div class="cr-row">
+                    <div class="bill-container">
+                        <div class="n-box" id ="hundred-ammount">0</div>
+                        <input type="number" id="hundred" class="n-box">
+                        <button type="button" onclick="chargeObj('hundred','add','cashRegisterObj')" class="input-button">+</button>
+                        <button type="button" onclick="chargeObj('hundred','subtract','cashRegisterObj')" class="input-button">-</button>
+                        <div class ="n-box">One Hundred</div>
+                    </div>
+                </div>
+                <div id ="status-row">
+                    <div class="n-box" id ="status">Cash register Satus</div>
+                    <div class="n-box" id ="total-c-reg">Total Ammount:0</div>
+                </div>
+                <div class="cr-row" id ="change-container">
+                </div>
+            </div>
+            <div>
+                This terminal will allow you to make a transcation, You can specify the product price and then
+                enter how you will like to pay for the product eg: what bills/coins and how much of them.
+            </div>
+            <div class="cr-box">
+                <div class="cr-row">
+                    <div class="bill-container">
+                        <div class="n-box" id ="p-penny-ammount">0</div>
+                        <input type="number" id="p-penny" class="n-box">
+                        <button type="button" onclick="chargeObj('penny','add','paymentObj')" class="input-button">+</button>
+                        <button type="button" onclick="chargeObj('penny','subtract','paymentObj')" class="input-button">-</button>
+                        <div class ="n-box">Penny</div>
+                    </div>
+                    <div class="bill-container">
+                        <div class="n-box" id ="p-nickel-ammount">0</div>
+                        <input type="number" id="p-nickel" class="n-box">
+                        <button type="button" onclick="chargeObj('nickel','add','paymentObj')" class="input-button">+</button>
+                        <button type="button" onclick="chargeObj('nickel','subtract','paymentObj')" class="input-button">-</button>
+                        <div class ="n-box">Nickel</div>
+                    </div>
+                </div>
+                <div class="cr-row">
+                    <div class="bill-container">
+                        <div class="n-box" id ="p-dime-ammount">0</div>
+                        <input type="number" id="p-dime" class="n-box">
+                        <button type="button" onclick="chargeObj('dime','add','paymentObj')" class="input-button">+</button>
+                        <button type="button" onclick="chargeObj('dime','subtract','paymentObj')" class="input-button">-</button>
+                        <div class ="n-box">Dime</div>
+                    </div>
+                    <div class="bill-container">
+                        <div class="n-box" id ="p-quater-ammount">0</div>
+                        <input type="number" id="p-quater" class="n-box">
+                        <button type="button" onclick="chargeObj('quater','add','paymentObj')" class="input-button">+</button>
+                        <button type="button" onclick="chargeObj('quater','subtract','paymentObj')" class="input-button">-</button>
+                        <div class ="n-box">Quater</div>
+                    </div>
+                </div>
+                <div class="cr-row">
+                    <div class="bill-container">
+                        <div class="n-box" id ="p-one-ammount">0</div>
+                        <input type="number" id="p-one" class="n-box">
+                        <button type="button" onclick="chargeObj('one','add','paymentObj')" class="input-button">+</button>
+                        <button type="button" onclick="chargeObj('one','subtract','paymentObj')" class="input-button">-</button>
+                        <div class ="n-box">One</div>
+                    </div>
+                    <div class="bill-container">
+                        <div class="n-box" id ="p-five-ammount">0</div>
+                        <input type="number" id="p-five" class="n-box">
+                        <button type="button" onclick="chargeObj('five','add','paymentObj')" class="input-button">+</button>
+                        <button type="button" onclick="chargeObj('five','subtract','paymentObj')" class="input-button">-</button>
+                        <div class ="n-box">Five</div>
+                    </div>
+                </div>
+                <div class="cr-row">
+                    <div class="bill-container">
+                        <div class="n-box" id ="p-ten-ammount">0</div>
+                        <input type="number" id="p-ten" class="n-box">
+                        <button type="button" onclick="chargeObj('ten','add','paymentObj')" class="input-button">+</button>
+                        <button type="button" onclick="chargeObj('ten','subtract','paymentObj')" class="input-button">-</button>
+                        <div class ="n-box">Ten</div>
+                    </div>
+                    <div class="bill-container">
+                        <div class="n-box" id ="p-twenty-ammount">0</div>
+                        <input type="number" id="p-twenty" class="n-box">
+                        <button type="button" onclick="chargeObj('twenty','add','paymentObj')" class="input-button">+</button>
+                        <button type="button" onclick="chargeObj('twenty','subtract','paymentObj')" class="input-button">-</button>
+                        <div class ="n-box">Twenty</div>
+                    </div>
+                </div>
+                <div class="cr-row">
+                    <div class="bill-container">
+                        <div class="n-box" id ="p-hundred-ammount">0</div>
+                        <input type="number" id="p-hundred" class="n-box">
+                        <button type="button" onclick="chargeObj('hundred','add','paymentObj')" class="input-button">+</button>
+                        <button type="button" onclick="chargeObj('hundred','subtract','paymentObj')" class="input-button">-</button>
+                        <div class ="n-box">One Hundred</div>
+                    </div>
+                </div>
+                <div id = "charge-row">
+                    <input type="number" id ="price" class="n-box" placeholder="Product price">
+                    <div class="n-box" id ="total-c-given">Total Ammount:0</div>
+                    <button type="button" onclick="makePayment()" class="input-button" id="charge-button">Make Transcation</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="section-div" id ="f-sec">
+        <div>
+            <h3>Sum All Odd Fibonacci Numbers:</h3>
+            <div>
+                In mathematics, the Fibonacci numbers, commonly denoted Fn, 
+                form a sequence, the Fibonacci sequence, in which each number is the sum 
+                of the two preceding ones. The sequence commonly starts from 0 and 1, 
+                although some authors omit the initial terms and start the sequence from 1 
+                and 1 or from 1 and 2. Starting from 0 and 1, the next few values in the 
+                sequence are: 0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144,
+            </div>
+            <div>
+                The algorithm below will sum all odd fibonacci number's untill the given number.
+            </div>
+            <div>
+                <div class=center>
+                    <div class="number-algo-container">
+                        <input type="number" id="fib-input" class="n-box">
+                        <button type="button" onclick="fibUpdateUI()" class="input-button">Run</button>
+                        <div id="fib-output" class ="n-box"></div>
+                    </div>
+                    </div>
+            </div>
+        </div>
+    </div>
+    <div class="section-div" id ="p-sec">
+        <div>
+            <h3>Sum All Primes:</h3>
+            <div>
+                A prime number (or a prime) is a natural number greater than 
+                1 that is not a product of two smaller natural numbers. 
+                A natural number greater than 1 that is not prime is called a 
+                composite number. For example, 5 is prime because the only ways of 
+                writing it as a product, 1 × 5 or 5 × 1, involve 5 itself. However, 
+                4 is composite because it is a product (2 × 2) in which both numbers 
+                are smaller than 4. Primes are central in number theory because of the 
+                fundamental theorem of arithmetic: every natural number greater than 1 is 
+                either a prime itself or can be factorized as a product of primes that is 
+                unique up to their order.
+            </div>
+            <div>
+                The algorithm below will sum all the prime numbes untill the given number.
+            </div>
+            <div>
+                <div class=center>
+                    <div class="number-algo-container">
+                        <input type="number" id="prime-input" class="n-box">
+                        <button type="button" onclick="primeUpdateUI()" class="input-button">Run</button>
+                        <div id="prime-output" class ="n-box"></div>
+                    </div>
+                    </div>
+            </div>
+        </div>
+    </div>
+    <div class="section-div" id ="l-sec">
+        <div>
+            <h3>Lowest Common Multiple Range:</h3>
+            <div>
+                In arithmetic and number theory, the least common multiple, 
+                lowest common multiple, or smallest common multiple of two 
+                integers a and b, usually denoted by lcm(a, b), is the smallest 
+                positive integer that is divisible by both a and b.[1][2] Since 
+                division of integers by zero is undefined, this definition has 
+                meaning only if a and b are both different from zero.[3] However, 
+                some authors define lcm(a,0) as 0 for all a, which is the result 
+                of taking the lcm to be the least upper bound in the lattice of 
+                divisibility.
+            </div>
+            <div>
+                The algorithm below will provide you the lowest commom multiple of the given range.
+            </div>
+            <div>
+                <div class=center>
+                    <div class="number-algo-container">
+                        <input type="number" id="lcm-input-1" class="n-box">
+                        <input type="number" id="lcm-input-2" class="n-box">
+                        <button type="button" onclick="lcmUpdateUI()" class="input-button">Run</button>
+                        <div id="lcm-output" class ="n-box"></div>
+                    </div>
+                    </div>
+            </div>
+        </div>
+    </div>
+</body>
+    
